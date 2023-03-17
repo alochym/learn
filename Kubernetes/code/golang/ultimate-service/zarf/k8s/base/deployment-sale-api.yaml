@@ -17,3 +17,10 @@ spec:
       containers:
       - image: service-amd64:1.0
         name: service-amd64
+        # limit resource to 100m for sales-api container
+        resources:
+          limits:
+            cpu: 100m
+          requests:
+            cpu: 100m
+

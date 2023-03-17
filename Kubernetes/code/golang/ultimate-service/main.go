@@ -4,13 +4,17 @@ import (
 	"log"
 	"os"
 	"os/signal"
+	"runtime"
 	"syscall"
+
+	_ "go.uber.org/automaxprocs"
 )
 
 var build = "development"
 
 func main() {
-	log.Println("Starting service", build)
+	cpu := runtime.GOMAXPROCS(0)
+	log.Printf("Starting service - [%s], CPU - [%d]", build, cpu)
 
 	defer log.Println("service end")
 
