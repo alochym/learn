@@ -11,7 +11,7 @@ build:
 build-container:
 	docker build \
 		-f zarf/Docker/Dockerfile \
-		-t sales-api-amd64:${VERSION} \
-		--build-args BUILD_REF=${VERSION} \
-		--build-args BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ` \
+		-t service-amd64:${VERSION} \
+		--build-arg BUILD_REF=${VERSION} \
+		--build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
 		.
