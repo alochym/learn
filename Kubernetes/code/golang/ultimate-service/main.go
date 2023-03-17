@@ -7,12 +7,17 @@ import (
 	"runtime"
 	"syscall"
 
-	_ "go.uber.org/automaxprocs"
+	// _ "go.uber.org/automaxprocs"
+	"go.uber.org/automaxprocs/maxprocs"
 )
 
 var build = "development"
 
 func main() {
+	if _, err := maxprocs.Set(); err != nil {
+		log.Println("Max CPU: %w", err)
+	}
+
 	cpu := runtime.GOMAXPROCS(0)
 	log.Printf("Starting service - [%s], CPU - [%d]", build, cpu)
 
