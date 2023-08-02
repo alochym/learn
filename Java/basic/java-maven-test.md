@@ -76,4 +76,9 @@
 ## Running Java Jar file
 
 1. cd into Java Project root folder.
-1. `[hadn@publish java-project]$ java -cp target/java-project-1.0-SNAPSHOT.jar com.alochym.App``
+1. `[hadn@publish java-project]$ java -cp target/java-project-1.0-SNAPSHOT.jar com.alochym.App`
+
+## Links
+
+1. https://linuxize.com/post/how-to-install-apache-maven-on-centos-7/
+1. https://mkyong.com/maven/how-to-create-a-java-project-with-maven/
