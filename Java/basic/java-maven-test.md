@@ -66,10 +66,27 @@
 1. To run a single test method in Maven - `mvn test -Dtest=AppTest#testApp test`
    1. `AppTest` is the test class name 
    1. `testApp` is the test method.
+1. `mvn test -Dtest=SumNumberTest#testSumNumber test`
 1. Testing in a multi-module project - `mvn test -pl <module-name> -Dtest=AppTest#testApp test`
-
 ## Clean and Build package
 
+1. **Update the [pom.xml](../basic/maven-project/java-project/pom.xml)** to set the Entry Point Class-Path to the Manifest.
+
+   ```xml
+   <!-- add maven jar plugin to fix no main manifest attribute -->
+   <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-jar-plugin</artifactId>
+      <configuration>
+      <archive>
+         <manifest>
+            <!-- file name App.java with main function -->
+            <mainClass>com.alochym.App</mainClass>
+         </manifest>
+      </archive>
+      </configuration>
+   </plugin>
+   ```
 1. mvn clean - clean every thing of old package
 1. mvn package - create Java package jar file
 
