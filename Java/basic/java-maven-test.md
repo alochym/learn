@@ -93,6 +93,7 @@
 ## Running Java Jar file
 
 1. cd into Java Project root folder.
+1. `[hadn@publish java-project]$ java -jar target/java-project-1.0-SNAPSHOT.jar`
 1. `[hadn@publish java-project]$ java -cp target/java-project-1.0-SNAPSHOT.jar com.alochym.App`
 
 ## Links
