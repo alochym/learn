@@ -98,5 +98,6 @@
 
 ## Links
 
+1. https://github.com/alochym/java-learn/blob/master/docs/java-maven.md
 1. https://linuxize.com/post/how-to-install-apache-maven-on-centos-7/
 1. https://mkyong.com/maven/how-to-create-a-java-project-with-maven/
