@@ -5,7 +5,7 @@
 
 ## Installation
 
-1. wget https://dlcdn.apache.org/maven/maven-3/3.9.3/binaries/apache-maven-3.9.3-bin.tar.gz --no-check-certificate
+1. wget <https://dlcdn.apache.org/maven/maven-3/3.9.3/binaries/apache-maven-3.9.3-bin.tar.gz> --no-check-certificate
 1. sudo tar xvf apache-maven-3.9.3-bin.tar.gz -C /opt
 1. vi ~/.bash_profile
 
@@ -26,17 +26,17 @@
    Default locale: en_US, platform encoding: UTF-8
    OS name: "linux", version: "3.10.0-1160.88.1.el7.x86_64", arch: "amd64", family: "unix"
    ```
-   
+
 ## Create Project
 
 1. Command line
 
    ```bash
    mvn archetype:generate 
-	-DgroupId={project-packaging}
-	-DartifactId={project-name}
-	-DarchetypeArtifactId={maven-template} 
-	-DinteractiveMode=false
+ -DgroupId={project-packaging}
+ -DartifactId={project-name}
+ -DarchetypeArtifactId={maven-template} 
+ -DinteractiveMode=false
    ```
 
 1. `mvn archetype:generate -DgroupId=com.alochym -DartifactId=java-project -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false`
@@ -60,14 +60,16 @@
                     └── alochym
                         └── AppTest.java # JUnit test.
 ```
+
 ## Running Test
 
 1. Test all - `mvn test`
 1. To run a single test method in Maven - `mvn test -Dtest=AppTest#testApp test`
-   1. `AppTest` is the test class name 
+   1. `AppTest` is the test class name
    1. `testApp` is the test method.
 1. `mvn test -Dtest=SumNumberTest#testSumNumber test`
 1. Testing in a multi-module project - `mvn test -pl <module-name> -Dtest=AppTest#testApp test`
+
 ## Clean and Build package
 
 1. **Update the [pom.xml](../basic/maven-project/java-project/pom.xml)** to set the Entry Point Class-Path to the Manifest.
@@ -87,6 +89,7 @@
       </configuration>
    </plugin>
    ```
+
 1. mvn clean - clean every thing of old package
 1. mvn package - create Java package jar file
 
@@ -98,6 +101,6 @@
 
 ## Links
 
-1. https://github.com/alochym/java-learn/blob/master/docs/java-maven.md
-1. https://linuxize.com/post/how-to-install-apache-maven-on-centos-7/
-1. https://mkyong.com/maven/how-to-create-a-java-project-with-maven/
+1. <https://github.com/alochym/java-learn/blob/master/docs/java-maven.md>
+1. <https://linuxize.com/post/how-to-install-apache-maven-on-centos-7/>
+1. <https://mkyong.com/maven/how-to-create-a-java-project-with-maven/>

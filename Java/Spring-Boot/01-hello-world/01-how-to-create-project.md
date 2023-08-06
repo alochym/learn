@@ -16,4 +16,8 @@
 
 ## Compile Native Image
 
-1. ./mvnw -Pnative native:compile
+1. ***Take a lot of RAM to compile***.
+1. Install JAVA GRAALVM - <https://www.graalvm.org/downloads/>.
+1. Create a profile to use JAVA GRAALVM folder as JAVA_HOME default.
+1. ./mvnw -Pnative native:compile.
+1. Update [pom.xml](/Java/alochym/pom.xml) with ***GraalVM Native Support***.
